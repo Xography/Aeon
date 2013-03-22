@@ -1,6 +1,6 @@
 #Aeon Framework
 
-The Aeon Framework is a powerful, generic data-driven framework to implement real-time 2D/3D applications, such as simulations, VR and games. 
+The Aeon Core Framework library provides a set of versatile, commonly needed classes for building a high performance, data-driven real time application with C++.
 
 ## Components
 The Aeon Framework provides all core functionality for a game and abstract subsystems (Renderer, Input, Audio, Platform, UI). It provides a collection of common classes and templates that are required for developing for applications of this nature.
@@ -9,19 +9,28 @@ The components in detail:
 
 * Application
 * Logging System
-* Process Manager / Multicore and Threading
+* Processes / Process Manager 
+* Multicore and Threading
 * Memory Management & -Pooling
-* Event/Messaging System
-* Entity System
+* Event / Messaging System
+* Entity Layer
+* Entity Database/Loaders
+* Component Layer
+* Task Scheduling
+* Timers
+* Automated serialization layers
+* UUID system
+* Prebuilt common types
+* Finite State Machine
+* Bucketing
 * Extensible Serialization structure
 * Delegates
-* LUA Scripting
-* Plugins (Plugins/ZIP, Plugins/XML)
-* Finite State Machine
-* Basic AI (α-β-Pruning, A*)
+* JavaScript/V8 Scripting
+* Dynamic module loader
+* Plugin Architecture (ZIP, XML, Subsystems)
 
 ## Aeon Editor
-The QT-based Aeon Editor allows developers (esp. non-programmers) to edit the game components.
+The QT-based Aeon Editor allows developers (esp. non-programmers) to edit application/game components.
 
 It loads the native Entities and Components from the Game.dll and allows the Designers to place those in the World Editor and create Entity Instances to their liking.
 Every game mechanic (Quest, NPCs, Items, ..) requires a plugin so that the Designers can create those elements and serialize them to the GameDB.
