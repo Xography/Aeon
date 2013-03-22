@@ -3,11 +3,10 @@
 The Aeon Core Framework library provides a set of versatile, commonly needed classes for building a high performance, data-driven real time application with C++.
 
 ## Components
-The Aeon Framework provides all core functionality for a game and abstract subsystems (Renderer, Input, Audio, Platform, UI). It provides a collection of common classes and templates that are required for developing for applications of this nature.
+The Aeon Framework provides components for the core functionality of large scale, data intensive real time applications such as simulations, VR and games. It provides a collection of common classes and templates that are required when developing applications of this nature:
 
-The components in detail:
-
-* Application
+* Application Framework
+* Dynamic module loader
 * Logging System
 * Processes / Process Manager 
 * Multicore and Threading
@@ -25,9 +24,9 @@ The components in detail:
 * Bucketing
 * Extensible Serialization structure
 * Delegates
-* JavaScript/V8 Scripting
-* Dynamic module loader
-* Plugin Architecture (ZIP, XML, Subsystems)
+* LUA/JavaScript (V8) Scripting
+* Plugin Architecture (ZIP, XML)
+* Abstract Subsystems (Renderer, Input, Audio, Platform, UI)
 
 ## Aeon Editor
 The QT-based Aeon Editor allows developers (esp. non-programmers) to edit application/game components.
