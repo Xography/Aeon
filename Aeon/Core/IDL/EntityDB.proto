@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// Entity Database Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+import "Datatypes.proto";
+import "Entity.proto";
+import "Attribute.proto";
+import "Component.proto";
+import "UUID.proto";
+
+message CategoryDescriptor {
+	required UUID id = 1;
+	required string name = 2;
+}
+
+message DBDescriptor {
+	required string name = 1;
+	required string version = 2;
+	required string description = 3;
+	required string modified = 4;
+}
+	
+message EntityDB {
+	required DBDescriptor dbDescriptor = 1;
+	repeated EntityDescriptor entities = 2;
+	repeated ComponentDescriptor components = 3;
+	repeated CategoryDescriptor categories = 4;
+}

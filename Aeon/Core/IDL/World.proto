@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// World Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+import "Entity.proto";
+message World {
+	// World Name
+	required string world_name = 1;
+	// Last saved timestamp
+	required fixed32 timestamp = 2;
+	// The entity containing the world settings
+	required EntityInstance settings = 3;
+	// Table of serialized entitites
+	repeated EntityInstance entity_table = 4;
+}

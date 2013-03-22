@@ -1,0 +1,63 @@
+<RCC>
+  <qresource prefix="/EntityEditor">
+    <file alias="EntityInstance">bricks.png</file>
+    <file alias="WDB">database.png</file>
+    <file alias="WDBAdd">database_add.png</file>
+    <file alias="WDBConn">database_connect.png</file>
+    <file alias="WDBDel">database_delete.png</file>
+    <file alias="WDBEdit">database_edit.png</file>
+    <file alias="WDBError">database_error.png</file>
+    <file alias="WDBGear">database_gear.png</file>
+    <file alias="WDBGo">database_go.png</file>
+    <file alias="WDBKey">database_key.png</file>
+    <file alias="WDBLighting">database_lightning.png</file>
+    <file alias="WDBLink">database_link.png</file>
+    <file alias="WDBRefresh">database_refresh.png</file>
+    <file alias="WDBSave">database_save.png</file>
+    <file alias="EntityFolder">folder_brick.png</file>
+    <file alias="ComponentAdd">plugin_add.png</file>
+    <file alias="ComponentDelete">plugin_delete.png</file>
+    <file alias="WDBFolder">folder_database.png</file>
+    <file alias="ComponentDisabled">plugin_disabled.png</file>
+    <file alias="Component">plugin.png</file>
+    <file alias="ComponentEdit">plugin_edit.png</file>
+    <file alias="ComponentError">plugin_error.png</file>
+    <file alias="ComponentGo">plugin_go.png</file>
+    <file alias="ComponentLink">plugin_link.png</file>
+    <file alias="Entity">brick.png</file>
+    <file alias="EntityAdd">brick_add.png</file>
+    <file alias="EntityDelete">brick_delete.png</file>
+    <file alias="EntityEdit">brick_edit.png</file>
+    <file alias="EntityError">brick_error.png</file>
+    <file alias="EntityGo">brick_go.png</file>
+    <file alias="EntityLink">brick_link.png</file>
+    <file alias="CategorySet">package_link.png</file>
+    <file alias="CategoryIcon">package.png</file>
+    <file alias="CategoryAdd">package_add.png</file>
+    <file alias="CategoryDelete">package_delete.png</file>
+    <file alias="CategoryRename">package_go.png</file>
+    <file alias="Cross">cross.png</file>
+    <file alias="Undo">arrow_undo.png</file>
+    <file alias="Add">add.png</file>
+    <file alias="Accept">accept.png</file>
+    <file alias="Delete">delete.png</file>
+    <file alias="Rename">textfield_rename.png</file>
+    <file alias="Clone">document_copies.png</file>
+    <file alias="ClearFilter">filter_delete.png</file>
+    <file alias="Wrench">wrench.png</file>
+    <file alias="Category">category.png</file>
+    <file alias="Info">information.png</file>
+    <file alias="Error">exclamation.png</file>
+    <file alias="Native">ComponentNative.png</file>
+    <file alias="New">New.png</file>
+    <file alias="Open">Open.png</file>
+    <file alias="Save">Save.png</file>
+    <file alias="SaveAs">SaveAs.png</file>
+    <file alias="Help">Help.png</file>
+    <file alias="Quit">Quit.png</file>
+    <file alias="Aeon">EntityEditor.ico</file>
+  </qresource>
+  <qresource prefix="Images">
+    <file>Aeon_logo_smaller.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// Game Database Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+message GameDB {
+  message GameDBDescriptor{
+	required string name = 1;
+	required string date = 2;
+	optional fixed32 hash = 3;
+  }
+  required GameDBDescriptor game_db_descriptor = 1;
+  
+  // Allow the Game implementation to hook extensions into this DB
+  extensions 50 to max;
+}

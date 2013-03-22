@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// Component Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+import "Attribute.proto";
+import "UUID.proto";
+
+message ComponentDescriptor {
+	enum ComponentType {
+		NATIVE = 0;
+		SCRIPT = 1;
+	}
+	
+	// A paramater is only a description of the attribute name and data type.
+	// The actual values are assigned in the entity.
+	message Parameter {
+		required string key = 1;
+		required AttributeType type = 2;
+	}
+	required UUID id = 1;
+	required string name = 2;
+	optional string description = 3;
+	required ComponentType type = 4;
+	repeated Parameter parameters = 5;
+}
+
+// Instanced components
+message ComponentInstance {
+	required UUID this_id = 1;
+	required UUID descriptor_id = 2;
+}

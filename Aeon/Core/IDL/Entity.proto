@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// Entity Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+import "Datatypes.proto";
+import "Attribute.proto";
+import "Component.proto";
+import "Value.proto";
+import "UUID.proto";
+
+// Descriptor for entity templates
+message EntityDescriptor {
+	required UUID id = 1;
+	required string name = 2;
+	required UUID category = 3;
+	required UUID subcat = 4;
+	repeated Attribute attributes = 5; // attributes with keys and value
+	repeated UUID components = 6; // component ids
+}
+
+// Descriptor for storing entities to disk. We only need to store paramater values and metadata.
+message EntityInstance {
+	required UUID id = 1;
+	required UUID entity_descriptor = 2;
+	repeated AttributeInstance values = 3; // Attributes are serialized to disk
+	repeated ComponentInstance components = 4; // Attached components, will be created from descriptors anyway
+}

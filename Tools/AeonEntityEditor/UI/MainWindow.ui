@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Aeon Entity Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/EntityEditor/EntityEditor.ico</normaloff>:/EntityEditor/EntityEditor.ico</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTabWidget" name="MainTabWidget">
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="Menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="MenuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="MenuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="MenuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="MenuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="ActionHelpAbout"/>
+   </widget>
+   <addaction name="MenuFile"/>
+   <addaction name="MenuEdit"/>
+   <addaction name="MenuView"/>
+   <addaction name="MenuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="Statusbar"/>
+  <action name="ActionHelpAbout">
+   <property name="icon">
+    <iconset resource="../Resources/EntityEditor_QT.qrc">
+     <normaloff>:/EntityEditor/Help</normaloff>:/EntityEditor/Help</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+   <property name="statusTip">
+    <string>Shows information about the application.</string>
+   </property>
+   <property name="whatsThis">
+    <string>Shows information about the application.</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="ActionFileQuit">
+   <property name="icon">
+    <iconset resource="../Resources/EntityEditor_QT.qrc">
+     <normaloff>:/EntityEditor/Quit</normaloff>:/EntityEditor/Quit</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="statusTip">
+    <string>Exits the application.</string>
+   </property>
+   <property name="whatsThis">
+    <string>Exits the application.</string>
+   </property>
+  </action>
+  <action name="ActionFileNew">
+   <property name="icon">
+    <iconset resource="../Resources/EntityEditor_QT.qrc">
+     <normaloff>:/EntityEditor/New</normaloff>:/EntityEditor/New</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="toolTip">
+    <string>Creates a new clean database for editing.</string>
+   </property>
+   <property name="statusTip">
+    <string>Creates a new clean database for editing.</string>
+   </property>
+   <property name="whatsThis">
+    <string>Creates a new clean database for editing.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="ActionFileOpen">
+   <property name="icon">
+    <iconset resource="../Resources/EntityEditor_QT.qrc">
+     <normaloff>:/EntityEditor/Open</normaloff>:/EntityEditor/Open</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Opens an existing database.</string>
+   </property>
+   <property name="statusTip">
+    <string>Opens an existing database.</string>
+   </property>
+   <property name="whatsThis">
+    <string>Opens an existing database.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="ActionFileSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Resources/EntityEditor_QT.qrc">
+     <normaloff>:/EntityEditor/Save</normaloff>:/EntityEditor/Save</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Saves the current database.</string>
+   </property>
+   <property name="statusTip">
+    <string>Saves the current database.</string>
+   </property>
+   <property name="whatsThis">
+    <string>Saves the current database.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="ActionFileSaveAs">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Resources/EntityEditor_QT.qrc">
+     <normaloff>:/EntityEditor/Save</normaloff>:/EntityEditor/Save</iconset>
+   </property>
+   <property name="text">
+    <string>Save &amp;As..</string>
+   </property>
+   <property name="toolTip">
+    <string>Saves the current database to </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../Resources/EntityEditor_QT.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ActionFileQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OnAbout()</slot>
+  <slot>on_ActionFileNew_triggered()</slot>
+  <slot>on_ActionFileOpen_triggered()</slot>
+  <slot>on_ActionFileSave_triggered()</slot>
+  <slot>on_ActionFileSaveAs_triggered()</slot>
+ </slots>
+</ui>

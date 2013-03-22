@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ComponentLibraryTab</class>
+ <widget class="QWidget" name="ComponentLibraryTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_6">
+   <item>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="handleWidth">
+      <number>5</number>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="lineEditFilter">
+           <property name="toolTip">
+            <string>Filters the list below based on your (case sensitive) input for easy searching.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Filters the list below based on your (case sensitive) input for easy searching.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Filter by name</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="buttonClearFilter">
+           <property name="toolTip">
+            <string>Clears the filter text.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Clears the filter text.</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>X</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/ClearFilter</normaloff>:/EntityEditor/ClearFilter</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidgetComponents">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>List of available components.</string>
+         </property>
+         <property name="whatsThis">
+          <string>List of available components.</string>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="uniformItemSizes">
+          <bool>true</bool>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QToolButton" name="buttonAddComponent">
+           <property name="toolTip">
+            <string>Adds a new component to the list.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Adds a new component to the list.</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/ComponentAdd</normaloff>:/EntityEditor/ComponentAdd</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="buttonDeleteComponent">
+           <property name="toolTip">
+            <string>Removes the currently selected component.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Removes the currently selected component.</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/ComponentDelete</normaloff>:/EntityEditor/ComponentDelete</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="buttonCloneComponent">
+           <property name="toolTip">
+            <string>Clones the selected component.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Clones the selected component.</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>Clone</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/ComponentEdit</normaloff>:/EntityEditor/ComponentEdit</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="locale">
+       <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="title">
+       <string>Component</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="handleWidth">
+          <number>1</number>
+         </property>
+         <property name="childrenCollapsible">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="locale">
+              <locale language="English" country="UnitedStates"/>
+             </property>
+             <property name="text">
+              <string>A short &amp;description of the component.</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="buddy">
+              <cstring>textEditDescription</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="textEditDescription">
+             <property name="locale">
+              <locale language="English" country="UnitedStates"/>
+             </property>
+             <property name="lineWrapMode">
+              <enum>QPlainTextEdit::WidgetWidth</enum>
+             </property>
+             <property name="backgroundVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="locale">
+              <locale language="English" country="UnitedStates"/>
+             </property>
+             <property name="text">
+              <string>The &amp;parameters and their types that are attached to the component. Note that default values can be set after attaching it to an entity.</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="buddy">
+              <cstring>tableWidgetParameters</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QTableWidget" name="tableWidgetParameters">
+               <property name="locale">
+                <locale language="English" country="UnitedStates"/>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::SingleSelection</enum>
+               </property>
+               <property name="gridStyle">
+                <enum>Qt::SolidLine</enum>
+               </property>
+               <property name="sortingEnabled">
+                <bool>true</bool>
+               </property>
+               <property name="cornerButtonEnabled">
+                <bool>false</bool>
+               </property>
+               <attribute name="horizontalHeaderVisible">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderCascadingSectionResizes">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderHighlightSections">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderMinimumSectionSize">
+                <number>100</number>
+               </attribute>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderCascadingSectionResizes">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderHighlightSections">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Parameter Name</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Parameter Type</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QToolButton" name="buttonAddParameter">
+                 <property name="toolTip">
+                  <string>Adds a new parameter or attribute to this component.</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>Adds a new parameter or attribute to this component.</string>
+                 </property>
+                 <property name="locale">
+                  <locale language="English" country="UnitedStates"/>
+                 </property>
+                 <property name="text">
+                  <string>+</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../Resources/EntityEditor_QT.qrc">
+                   <normaloff>:/EntityEditor/Add</normaloff>:/EntityEditor/Add</iconset>
+                 </property>
+                 <property name="autoRaise">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="buttonRemoveParameter">
+                 <property name="toolTip">
+                  <string>Removes the selected parameter.</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>Removes the selected parameter.</string>
+                 </property>
+                 <property name="locale">
+                  <locale language="English" country="UnitedStates"/>
+                 </property>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../Resources/EntityEditor_QT.qrc">
+                   <normaloff>:/EntityEditor/Delete</normaloff>:/EntityEditor/Delete</iconset>
+                 </property>
+                 <property name="autoRaise">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="buttonSave">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Makes permanent any changes made to this component.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Makes permanent any changes made to this component.</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>&amp;Save component</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/ComponentGo</normaloff>:/EntityEditor/ComponentGo</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="buttonRevert">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Undoes any changes made to the component since it was last saved.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Undoes any changes made to the component since it was last saved.</string>
+           </property>
+           <property name="locale">
+            <locale language="English" country="UnitedStates"/>
+           </property>
+           <property name="text">
+            <string>&amp;Revert</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/Undo</normaloff>:/EntityEditor/Undo</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditFilter</tabstop>
+  <tabstop>buttonClearFilter</tabstop>
+  <tabstop>listWidgetComponents</tabstop>
+  <tabstop>buttonAddComponent</tabstop>
+  <tabstop>buttonDeleteComponent</tabstop>
+  <tabstop>buttonCloneComponent</tabstop>
+  <tabstop>textEditDescription</tabstop>
+  <tabstop>tableWidgetParameters</tabstop>
+  <tabstop>buttonAddParameter</tabstop>
+  <tabstop>buttonRemoveParameter</tabstop>
+  <tabstop>buttonSave</tabstop>
+  <tabstop>buttonRevert</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../Resources/EntityEditor_QT.qrc"/>
+ </resources>
+ <connections/>
+</ui>

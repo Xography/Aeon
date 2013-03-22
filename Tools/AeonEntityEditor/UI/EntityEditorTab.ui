@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EntityEditorTab</class>
+ <widget class="QWidget" name="EntityEditorTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>517</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_7">
+   <item>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="handleWidth">
+      <number>5</number>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTreeWidget" name="entitiesTree">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+         </property>
+         <property name="dragEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::NoDragDrop</enum>
+         </property>
+         <property name="defaultDropAction">
+          <enum>Qt::IgnoreAction</enum>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <attribute name="headerVisible">
+          <bool>true</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string notr="true">Entity Library</string>
+          </property>
+         </column>
+         <item>
+          <property name="text">
+           <string>Monsters</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Chests</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Heavy Chest Dark</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Heavy Chest Light</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Wooden Box</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>Triggers</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Spawnpoints</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Portals</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Zone Markers</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="addRemoveEntitiesLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="addEntityButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Add a new entity under the current section in the library.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Add a new entity under the current section in the library.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/EntityAdd</normaloff>:/EntityEditor/EntityAdd</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="removeEntityButton">
+           <property name="toolTip">
+            <string>Remove the currently selected entity from the library.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Remove the currently selected entity from the library.</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/EntityDelete</normaloff>:/EntityEditor/EntityDelete</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="setEntityCategoryButton">
+           <property name="toolTip">
+            <string>Sets the category the selected entity belongs to.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Sets the category the selected entity belongs to.</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/CategorySet</normaloff>:/EntityEditor/CategorySet</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QToolButton" name="addCategoryButton">
+           <property name="toolTip">
+            <string>Adds a new category to the list.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Adds a new category to the list.</string>
+           </property>
+           <property name="text">
+            <string>Add Cat</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/CategoryAdd</normaloff>:/EntityEditor/CategoryAdd</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="removeCategoryButton">
+           <property name="toolTip">
+            <string>Removes the selected category from the list.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Removes the selected category from the list.</string>
+           </property>
+           <property name="text">
+            <string>Rem Cat</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/CategoryDelete</normaloff>:/EntityEditor/CategoryDelete</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="renameCategoryButton">
+           <property name="toolTip">
+            <string>Renames the selected category.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Renames the selected category.</string>
+           </property>
+           <property name="text">
+            <string>Ren Cat</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/CategoryRename</normaloff>:/EntityEditor/CategoryRename</iconset>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="entitySettingsGroup">
+      <property name="title">
+       <string>Entity</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QWidget" name="layoutWidget1">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>This table contains the &amp;attributes or parameters that are part of the entity.</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="AeonPropertyBrowser" name="attributeBrowser" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QToolButton" name="removeAttributeButton">
+                 <property name="toolTip">
+                  <string>Remove the selected attribute from the entity.</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>Remove the selected attribute from the entity.</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../Resources/EntityEditor_QT.qrc">
+                   <normaloff>:/EntityEditor/Delete</normaloff>:/EntityEditor/Delete</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="autoRaise">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="entityName">
+                 <property name="toolTip">
+                  <string>The unique name of the new attribute to add to the entity (descriptor).</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>The unique name of the new attribute to add to the entity (descriptor).</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Enter the unique name of the new attribute..</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="entityTypeCombo">
+                 <property name="toolTip">
+                  <string>The type of the new attribute to add to the list.</string>
+                 </property>
+                 <property name="statusTip">
+                  <string/>
+                 </property>
+                 <property name="whatsThis">
+                  <string>The type of the new attribute to add to the list.</string>
+                 </property>
+                 <property name="accessibleName">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QToolButton" name="addAttributeButton">
+                 <property name="toolTip">
+                  <string>Add a new attribute to the active entity.</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>Add a new attribute to the active entity.</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../Resources/EntityEditor_QT.qrc">
+                   <normaloff>:/EntityEditor/Add</normaloff>:/EntityEditor/Add</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="autoRaise">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget2">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>This table contains the entity's &amp;components or behaviours, which define how the enttiy interacts with the world and how it will respond to certain events, other objects, the world, ...</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="buddy">
+              <cstring>componentsList</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="componentsList">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>List of component (descriptors) currently present in the entity (descriptor).</string>
+             </property>
+             <property name="whatsThis">
+              <string>List of component (descriptors) currently present in the entity (descriptor).</string>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>RenderableBehaviour</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ChestBehaviour</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SomeOtherBehaviour</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QToolButton" name="removeComponentButton">
+               <property name="toolTip">
+                <string>Remove the currently selected behaviour or component from the active entity.</string>
+               </property>
+               <property name="statusTip">
+                <string/>
+               </property>
+               <property name="whatsThis">
+                <string>Removes the selected component from the entity.</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="../Resources/EntityEditor_QT.qrc">
+                 <normaloff>:/EntityEditor/Delete</normaloff>:/EntityEditor/Delete</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="componentsCombo">
+               <property name="toolTip">
+                <string>The component to add to the entity.</string>
+               </property>
+               <property name="whatsThis">
+                <string>The component to add to the entity.</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="addComponentButton">
+               <property name="toolTip">
+                <string>Add a new behaviour or component to the active entity.</string>
+               </property>
+               <property name="whatsThis">
+                <string>Add a new behaviour or component to the active entity.</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="../Resources/EntityEditor_QT.qrc">
+                 <normaloff>:/EntityEditor/Add</normaloff>:/EntityEditor/Add</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="entityChangesControlsLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="saveButton">
+           <property name="toolTip">
+            <string>Saves the changes made to the currently active entity.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Saves the changes made to the currently active entity.</string>
+           </property>
+           <property name="text">
+            <string>&amp;Save entity</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/EntityGo</normaloff>:/EntityEditor/EntityGo</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="revertButton">
+           <property name="toolTip">
+            <string>Undoes any changes done to the current entity and resets it back to its original state.</string>
+           </property>
+           <property name="whatsThis">
+            <string>Undoes any changes done to the current entity and resets it back to its original state.</string>
+           </property>
+           <property name="text">
+            <string>&amp;Revert</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Resources/EntityEditor_QT.qrc">
+             <normaloff>:/EntityEditor/Undo</normaloff>:/EntityEditor/Undo</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AeonPropertyBrowser</class>
+   <extends>QWidget</extends>
+   <header>AeonPropertyBrowser.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>entitiesTree</tabstop>
+  <tabstop>addEntityButton</tabstop>
+  <tabstop>removeEntityButton</tabstop>
+  <tabstop>setEntityCategoryButton</tabstop>
+  <tabstop>addCategoryButton</tabstop>
+  <tabstop>removeCategoryButton</tabstop>
+  <tabstop>renameCategoryButton</tabstop>
+  <tabstop>removeAttributeButton</tabstop>
+  <tabstop>entityName</tabstop>
+  <tabstop>entityTypeCombo</tabstop>
+  <tabstop>addAttributeButton</tabstop>
+  <tabstop>componentsList</tabstop>
+  <tabstop>removeComponentButton</tabstop>
+  <tabstop>componentsCombo</tabstop>
+  <tabstop>addComponentButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>revertButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../Resources/EntityEditor_QT.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>entityName</sender>
+   <signal>returnPressed()</signal>
+   <receiver>addAttributeButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>595</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_entitiesTree_itemSelected(QTreeWidgetItem*,QTreeWidgetItem*)</slot>
+  <slot>on_addEntityButton_clicked()</slot>
+  <slot>on_removeEntityButton_clicked()</slot>
+  <slot>on_addAttributeButton_clicked()</slot>
+  <slot>on_removeAttributeButton_clicked()</slot>
+  <slot>on_addComponentButton_clicked()</slot>
+  <slot>on_removeComponentButton_clicked()</slot>
+  <slot>on_saveButton_clicked()</slot>
+  <slot>on_revertButton_clicked()</slot>
+ </slots>
+</ui>

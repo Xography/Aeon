@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// Attribute Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+import "Value.proto";
+import "UUID.proto";
+
+enum AttributeType {
+	
+	BLOB = 1;
+	BOOL = 2; 
+	DOUBLE = 3;
+	FLOAT = 4;
+	INT32 = 5;
+	INT64 = 6;
+	MATRIX4X4 = 7;
+	QUATERNION = 8;
+	RANGE = 9;
+	STRING = 10;
+	VECTOR2 = 11;
+	VECTOR3 = 12;
+	VECTOR4 = 13;
+}
+
+// Normal attributes
+message Attribute {
+	message Key {		
+//		required UUID id = 1;
+		required string name = 1;
+	}
+	required Key key = 1;
+	required Value value = 2;
+}
+
+// Serialized Attributes
+message AttributeInstance {
+	required fixed32 key = 1;
+	required Value value = 2;
+}

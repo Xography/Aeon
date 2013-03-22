@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// Collections Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+import "Datatypes.proto";
+import "Attribute.proto";
+import "Value.proto";
+
+message List {
+	repeated Value value = 1;
+}
+
+message Map {
+	message KeyValuePair {
+		required Value key = 1;
+		required Value value = 2;
+	}
+	repeated KeyValuePair data = 1;
+}

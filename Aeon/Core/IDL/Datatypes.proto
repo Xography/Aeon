@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// Complex Datatypes Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+message Blob {
+	required bytes value = 1;
+}
+
+message Vector2 {
+	required float x = 1;
+	required float y = 2;
+}
+message Vector3 {
+	required float x = 1;
+	required float y = 2;
+	required float z = 3;
+}
+
+message Vector4 {
+	required float x0 = 1;
+	required float x1 = 2;
+	required float x2 = 3;
+	required float x3 = 4;
+}
+
+message Quaternion {
+	required float x = 1;
+	required float y = 2;
+	required float z = 3;
+	required float w = 4;
+}
+
+message Matrix4x4 {
+	required Vector4 x0 = 1;
+	required Vector4 x1 = 2;
+	required Vector4 x2 = 3;
+	required Vector4 x3 = 4;
+}
+
+message Range {
+	required float start = 1;
+	required float end = 2;
+	required float value = 3;
+}

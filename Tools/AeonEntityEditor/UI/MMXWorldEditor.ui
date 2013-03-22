@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AeonWorldEditor</class>
+ <widget class="QWidget" name="AeonWorldEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>897</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="toolTip">
+      <string>Displays entities currently placed in the world.</string>
+     </property>
+     <property name="whatsThis">
+      <string>Displays entities currently placed in the world.</string>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="itemsExpandable">
+      <bool>true</bool>
+     </property>
+     <property name="animated">
+      <bool>false</bool>
+     </property>
+     <property name="expandsOnDoubleClick">
+      <bool>true</bool>
+     </property>
+     <attribute name="headerDefaultSectionSize">
+      <number>170</number>
+     </attribute>
+     <attribute name="headerMinimumSectionSize">
+      <number>100</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Entity Instance</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>VEngine Object</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>Settings</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>WorldSettings</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>General</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>BoxEntity</string>
+       </property>
+       <property name="text">
+        <string>E_BOX_01</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Triggers</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>TriggerEntity</string>
+       </property>
+       <property name="text">
+        <string>E_TEST_01</string>
+       </property>
+      </item>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QToolButton" name="toolButtonAdd">
+        <property name="minimumSize">
+         <size>
+          <width>140</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Spawns a new entity and adds it to the list.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Spawns a new entity and adds it to the list.</string>
+        </property>
+        <property name="text">
+         <string>&amp;Spawn entity</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/EntityAdd</normaloff>:/EntityEditor/EntityAdd</iconset>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QToolButton" name="toolButtonAssign">
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Assigns an object placed using the V-Engine editor to the selected entity.</string>
+        </property>
+        <property name="statusTip">
+         <string>Assigns an object placed using the V-Engine editor to the selected entity.</string>
+        </property>
+        <property name="text">
+         <string>&amp;Bind V-Engine Object</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/EntityLink</normaloff>:/EntityEditor/EntityLink</iconset>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QToolButton" name="toolButtonDelete">
+        <property name="minimumSize">
+         <size>
+          <width>140</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Removes the currently selected entity.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Removes the currently selected entity.</string>
+        </property>
+        <property name="text">
+         <string>De&amp;lete Entity</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/EntityDelete</normaloff>:/EntityEditor/EntityDelete</iconset>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QToolButton" name="toolButtonUnassign">
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Removes the link between the V-Engine object and this entity. Does not remove any actual entities or objects.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Removes the link between the V-Engine object and this entity. Does not remove any actual entities or objects.</string>
+        </property>
+        <property name="text">
+         <string>&amp;Unbind V-Engine Object</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/EntityError</normaloff>:/EntityEditor/EntityError</iconset>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="2">
+    <widget class="AeonPropertyBrowser" name="propertyBrowser" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QFrame" name="frame_3">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButtonSave">
+        <property name="toolTip">
+         <string>Saves the world database.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Saves the world database.</string>
+        </property>
+        <property name="text">
+         <string>Save &amp;world database</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/WDBSave</normaloff>:/EntityEditor/WDBSave</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reparseWorldFile">
+        <property name="toolTip">
+         <string>Reloads the world file. Use this if you're editing the level in the V-Engine editor and want to make changes without having to restart the editor or reload the entire file.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Reloads the world file. Use this if you're editing the level in the V-Engine editor and want to make changes without having to restart the editor or reload the entire file.</string>
+        </property>
+        <property name="text">
+         <string>&amp;Reparse V-Engine .world</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/WDBRefresh</normaloff>:/EntityEditor/WDBRefresh</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QFrame" name="frame_2">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="buttonSaveEntity">
+        <property name="toolTip">
+         <string>Saves any changes made to the selected entity.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Saves any changes made to the selected entity.</string>
+        </property>
+        <property name="text">
+         <string>Save &amp;entity</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/EntityGo</normaloff>:/EntityEditor/EntityGo</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonResetEntity">
+        <property name="toolTip">
+         <string>Resets any changes made to the currently selected entity.</string>
+        </property>
+        <property name="whatsThis">
+         <string>Resets any changes made to the currently selected entity.</string>
+        </property>
+        <property name="text">
+         <string>Re&amp;vert</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../Resources/EntityEditor_QT.qrc">
+          <normaloff>:/EntityEditor/Undo</normaloff>:/EntityEditor/Undo</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>248</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AeonPropertyBrowser</class>
+   <extends>QWidget</extends>
+   <header>AeonPropertyBrowser.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Resources/EntityEditor_QT.qrc"/>
+ </resources>
+ <connections/>
+</ui>

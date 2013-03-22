@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// UUID Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+message UUID {
+	required fixed64 hi = 1 [default = 0];
+	required fixed64 lo = 2 [default = 0];
+}

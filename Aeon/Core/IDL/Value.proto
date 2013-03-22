@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// "Any Value" Serialization IDL
+// -----------------------------------------------------------------------------
+// This file is part of the Aeon Framework.
+// Copyright (C) 2012- The Aeon Development Team.
+// -----------------------------------------------------------------------------
+package Aeon.Serialize;
+option optimize_for = SPEED;
+
+import "Datatypes.proto";
+
+// Represents a sort of "any"-type Value object, limited to
+// the most common types
+message Value {		
+	optional bytes blob_value = 1;
+	optional bool boolean_value = 2;
+	optional double double_value = 3;
+	optional float float_value = 4;
+	optional int32 int_value = 5;
+	optional int64 long_value = 6;
+	optional Quaternion quaternion_value = 7;
+	optional string string_value = 8;
+	optional Vector2 vector2_value = 9;
+	optional Vector3 vector3_value = 10;
+	optional Vector4 vector4_value = 11;
+	optional Matrix4x4 matrix4x4_value = 12;
+	optional Range range_value = 13;
+}
