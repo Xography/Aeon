@@ -45,3 +45,6 @@ Every game mechanic (Quest, NPCs, Items, ..) requires a plugin so that the Desig
 * Felix Bruckner
 * Tom Gerrits
 * Mikhail Yanakaev
+
+## License
+Aeon and all of its components are licensed under the MIT License. Please refer to LICENSE.txt

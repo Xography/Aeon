@@ -1,5 +1,5 @@
 #AEON Framework
-The AEON Framework is a versatile Component-Entity system originally engineered for Sample Game.
+The AEON Framework is a versatile Component-Entity system originally engineered for a cancelled game project.
 
 #Core library
 The Core directory contains the entity framework and utility classes
@@ -34,4 +34,3 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-##AEON. Beyond Horizon
